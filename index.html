@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<script>
+    function mostrar() {
+        fieldset = document.getElementById('paso2');
+        fieldset.style.display = '';
+    }
+
+    function cerrar() {
+        fieldset = document.getElementById('paso2');
+        fieldset.style.display = 'none'; 
+    }
+
+    function cartel(params) {
+        
+    }
+</script>
+<body>
+    <div class="container">
+        <form action="formData.php" method="get">
+            <a class="paso1">
+                <legend>Tipo de evento</legend>
+                <a href="javascript:mostrar();"><input type="radio" name="eventType" id="eventoId" value="conferencia"></a>
+                <label for="eventType">Conferencias</label><br>
+                <a href="javascript:mostrar();"><input type="radio" name="eventType" id="eventoId" value="fiesta"></a>
+                <label for="fiesta">Fiesta</label><br>
+            </fieldset>
+            <fieldset id="paso2" class="paso2" style="display:none">
+                <legend>Asistentes</legend>
+                <select name="asistentes" id="asistentes">
+                    <option value="0-150" selected>Hasta 150</option>
+                    <option value="150-300">Hasta 300</option>
+                    <option value="mas De 300">Mas de 300</option>
+                    <option value="A definir">A definir</option>
+                </select>
+            </fieldset>
+            <fieldset class="paso3" style="display:none">
+                <legend>Opcionales</legend>
+                <input type="checkbox" id="option1" name="Proyector" value="Proyector">
+                <label for="vehicle1">Proyector</label><br>
+                <input type="checkbox" id="option2" name="Microfonos" value="Microfonos">
+                <label for="vehicle1"> Microfonos</label><br>
+                <input type="checkbox" id="option3" name="Sonido exterior" value="Sonido exterior">
+                <label for="vehicle1"> Sonido exterior</label><br>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
